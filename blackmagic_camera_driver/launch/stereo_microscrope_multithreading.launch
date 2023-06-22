@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="node_name"            default="video_input_node_multithreading" />
+    <arg name="camera_model"         default="stereo" /> <!-- 'zed' or 'zedm' -->
+    <arg name="publish_urdf"         default="true" />
+
+    <arg name="camera_name"          default="stereo_microscope" />
+    
+    <node name="$(arg node_name)" pkg="blackmagic_camera_driver" type="video_input_node_multithreading" output="screen" required="true"><!-- launch-prefix="valgrind" -->
+        <param name="camera_info_url_left" value="file://$(find blackmagic_camera_driver)/cfg/left.yaml" />
+        <param name="camera_info_url_right" value="file://$(find blackmagic_camera_driver)/cfg/right.yaml" />
+        <param name="camera_info_url_ost" value="file://$(find blackmagic_camera_driver)/cfg/ost.yaml" />
+        <!-- Configuration change 
+        <param name="general/camera_name"               value="$(arg camera_name)" />
+        -->
+    </node>
+</launch>

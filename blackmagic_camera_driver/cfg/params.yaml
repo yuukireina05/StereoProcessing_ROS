@@ -1,0 +1,83 @@
+general:
+  image_width: 640
+  image_height: 360
+
+left:
+  camera_name: narrow_stereo/left
+  camera_matrix:
+    rows: 3
+    cols: 3
+    data: [353.95024,   0.     , 311.63863,
+             0.     , 353.70593, 178.76037,
+             0.     ,   0.     ,   1.     ]
+  distortion_model: plumb_bob
+  distortion_coefficients:
+    rows: 1
+    cols: 5
+    data: [-0.173047, 0.026765, -0.000747, -0.001987, 0.000000]
+  rectification_matrix:
+    rows: 3
+    cols: 3
+    data: [ 0.99985748, -0.00063501, -0.01687054,
+            0.00058831,  0.99999598, -0.00277294,
+            0.01687223,  0.00276262,  0.99985384]
+  projection_matrix:
+    rows: 3
+    cols: 4
+    data: [351.51129,   0.     , 317.57889,   0.     ,
+             0.     , 351.51129, 187.29357,   0.     ,
+             0.     ,   0.     ,   1.     ,   0.     ]
+
+right:
+  camera_name: narrow_stereo/right
+  camera_matrix:
+    rows: 3
+    cols: 3
+    data: [353.50705,   0.     , 316.19423,
+             0.     , 353.88967, 191.22414,
+             0.     ,   0.     ,   1.     ]
+  distortion_model: plumb_bob
+  distortion_coefficients:
+    rows: 1
+    cols: 5
+    data: [-0.177898, 0.028584, 0.000462, -0.001823, 0.000000]
+  rectification_matrix:
+    rows: 3
+    cols: 3
+    data: [ 0.99986267, -0.00084514, -0.01655079,
+            0.00089095,  0.99999579,  0.0027606 ,
+            0.01654839, -0.00277497,  0.99985922]
+  projection_matrix:
+    rows: 3
+    cols: 4
+    data: [ 351.51129,    0.     ,  317.57889, -221.93594,
+              0.     ,  351.51129,  187.29357,    0.     ,
+              0.     ,    0.     ,    1.     ,    0.     ]
+
+ost:
+  image_width: 640
+  image_height: 480
+  camera_name: narrow_stereo
+  camera_matrix:
+    rows: 3
+    cols: 3
+    data: [434.37002,   0.     , 353.89985,
+             0.     , 433.55017, 253.876  ,
+             0.     ,   0.     ,   1.     ]
+  distortion_model: plumb_bob
+  distortion_coefficients:
+    rows: 1
+    cols: 5
+    data: [0.161658, -0.128041, 0.006688, 0.010293, 0.000000]
+  rectification_matrix:
+    rows: 3
+    cols: 3
+    data: [1., 0., 0.,
+           0., 1., 0.,
+           0., 0., 1.]
+  projection_matrix:
+    rows: 3
+    cols: 4
+    data: [455.83969,   0.     , 361.04745,   0.     ,
+             0.     , 459.37839, 256.81104,   0.     ,
+             0.     ,   0.     ,   1.     ,   0.     ]
